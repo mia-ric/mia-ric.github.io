@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" class="dark">
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/images/raph.png" />
@@ -15,7 +15,15 @@
             while(random === current) {
                 random = Math.floor(Math.random() * 4);
             }
+
+            const ev = new CustomEvent('page:favicon', { 
+                detail: `/images/${icons[random]}`,
+                cancelable: false,
+                bubbles: false 
+            });
+            document.dispatchEvent(ev);
             document.head.querySelector('[rel="icon"]').href = `/images/${icons[random]}`;
+
             setTimeout(changeFavicon, 10 * 1000);
         }
         setTimeout(changeFavicon, 10 * 1000);

@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+html {
+    @apply bg-zinc-900 text-zinc-300;
+}
