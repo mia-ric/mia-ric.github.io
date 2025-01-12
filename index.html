@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/raph.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MIA</title>
+
+    <script>
+        const icons = ['don.png', 'leo.png', 'mikey.png', 'raph.png'];
+        let current = 3;
+        function changeFavicon() {
+            let random = current;
+            while(random === current) {
+                random = Math.floor(Math.random() * 4);
+            }
+            document.head.querySelector('[rel="icon"]').href = `/images/${icons[random]}`;
+            setTimeout(changeFavicon, 10 * 1000);
+        }
+        setTimeout(changeFavicon, 10 * 1000);
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
