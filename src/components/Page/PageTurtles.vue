@@ -11,9 +11,13 @@
 
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref, watch } from 'vue';
+import don from '../../assets/images/don.webp';
+import leo from '../../assets/images/leo.webp';
+import mikey from '../../assets/images/mikey.webp';
+import raph from '../../assets/images/raph.webp';
 
 // States
-const image = ref<string>('/images/raph.png');
+const image = ref<string>(raph);
 const newImage = ref<null|string>(null);
 const inTransition = ref<boolean>(false);
 
@@ -48,7 +52,13 @@ watch(inTransition, (newValue) => {
  * @param ev 
  */
 function onChangeIcon(ev: CustomEvent) {
-    newImage.value = ev.detail;
+    const variants: any = {
+        '/images/don.png': don,
+        '/images/leo.png': leo,
+        '/images/mikey.png': mikey,
+        '/images/raph.png': raph,
+    };
+    newImage.value = ev.detail in variants ? variants[ev.detail] : raph;
 
     setTimeout(() => {
         inTransition.value = true;

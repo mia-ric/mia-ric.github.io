@@ -26,12 +26,12 @@ import PageTurtles from './components/Page/PageTurtles.vue';
 @import '@/styles/theme.css';
 
 :global(#app) {
-    @apply w-full h-full overflow-hidden;
+    @apply w-full;
 }
 
 main {
-    @apply w-full h-full flex flex-col;
-    background-size: 101% auto;
+    @apply w-full h-full min-h-screen flex flex-col;
+    background-size: 70% auto;
     background-color: #0B0009;
     background-image: url('assets/images/background-pink.webp');
     background-repeat: no-repeat;
