@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@import './base/fonts';
+@import './base/root';
+@import './utilities/scrollbar';
+@import './utilities/text-shadow';
+
+@theme {
+    --font-display: "Luckiest Guy", "sans-serif";
+}

@@ -1,0 +1,15 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Luckiest Guy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/luckiest-guy-v23-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Nova Square';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/nova-square-v25-latin-regular.woff2') format('woff2');
+}

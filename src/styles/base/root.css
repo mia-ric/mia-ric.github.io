@@ -1,0 +1,9 @@
+
+html {
+    @apply w-full h-full;
+    @apply bg-zinc-900 text-zinc-300;
+}
+
+body {
+    @apply w-full h-full;
+}

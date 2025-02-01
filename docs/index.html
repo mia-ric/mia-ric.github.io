@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" class="dark">
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/images/raph.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>MIA</title>
+    <title>TMNT</title>
 
     <script>
         const icons = ['don.png', 'leo.png', 'mikey.png', 'raph.png'];
@@ -15,13 +15,21 @@
             while(random === current) {
                 random = Math.floor(Math.random() * 4);
             }
+
+            const ev = new CustomEvent('page:favicon', { 
+                detail: `/images/${icons[random]}`,
+                cancelable: false,
+                bubbles: false 
+            });
+            document.dispatchEvent(ev);
             document.head.querySelector('[rel="icon"]').href = `/images/${icons[random]}`;
+
             setTimeout(changeFavicon, 10 * 1000);
         }
         setTimeout(changeFavicon, 10 * 1000);
     </script>
-  <script type="module" crossorigin src="/assets/index-CeWLfbzB.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BXS-EbdD.css">
+  <script type="module" crossorigin src="/assets/index-DGAWEcso.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Aswg850_.css">
 </head>
 <body>
     <div id="app"></div>

@@ -1,0 +1,4 @@
+
+@utility text-shadow {
+    @apply [text-shadow:_0_1px_0_var(--tw-shadow-color)];
+}
